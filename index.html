@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lic. Martín Monte — Psicólogo clínico en Mendoza. Sesiones presenciales y online. Especializado en ansiedad, depresión, duelo, autoestima y crisis vitales. M.P. 1234.">
+  <meta name="theme-color" content="#F7F3EE">
+  <meta property="og:title" content="Lic. Martín Monte · Psicólogo Clínico · Mendoza">
+  <meta property="og:description" content="El primer paso es el más difícil. Acá estoy para acompañarte.">
+  <meta property="og:type" content="website">
+  <title>Lic. Martín Monte · Psicólogo Clínico · Mendoza</title>
+  <link rel="stylesheet" href="styles.css?v=20260619">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- AURORA & GRAIN -->
+<div id="aurora" aria-hidden="true"></div>
+<div id="grain"  aria-hidden="true"></div>
+
+<!-- CURSOR -->
+<div id="cursor-ring"  aria-hidden="true"></div>
+<div id="cursor-dot"   aria-hidden="true"></div>
+<div id="cursor-label" aria-hidden="true"></div>
+
+<!-- MARCA LATERAL — solo en hero, se oculta al hacer scroll -->
+<aside id="side-mark" aria-hidden="true">
+  <span class="pulse"></span>
+  LIC. MARTÍN MONTE · M.P. 1234 · LUN → VIE 9–20H
+</aside>
+
+<!-- ==================== SPLASH ==================== -->
+<div id="splash" role="status" aria-label="Cargando sitio">
+  <div class="splash-letters" aria-hidden="true">
+    <span>M</span><span>O</span><span>N</span><span>T</span><span>E</span>
+  </div>
+  <div class="splash-bar-wrap">
+    <div class="splash-bar-fill"></div>
+  </div>
+  <p class="splash-sub">Psicólogo Clínico · Mendoza</p>
+</div>
+
+<!-- ==================== NAV ==================== -->
+<!-- CAMBIO 1: sin números en los links del nav -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <a href="#hero" class="nav-logo">Martín <span>Monte</span></a>
+
+  <div class="nav-links">
+    <a href="#sobre-mi"     data-cursor="leer">Sobre mí</a>
+    <a href="#motivos"      data-cursor="ver">Motivos</a>
+    <a href="#como-trabajo" data-cursor="leer">Cómo trabajo</a>
+    <a href="#modalidades"  data-cursor="ver">Modalidades</a>
+    <a href="#agendar" class="nav-cta" data-cursor="agendar">Agendar sesión</a>
+  </div>
+
+  <button id="burger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div id="mobile-overlay" onclick="closeMobileNav()"></div>
+<div id="mobile-nav" role="dialog" aria-label="Menú de navegación" aria-modal="true">
+  <button id="mobile-close" onclick="closeMobileNav()" aria-label="Cerrar menú">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <a href="#sobre-mi"     onclick="closeMobileNav()">Sobre mí</a>
+  <a href="#motivos"      onclick="closeMobileNav()">Motivos</a>
+  <a href="#como-trabajo" onclick="closeMobileNav()">Cómo trabajo</a>
+  <a href="#modalidades"  onclick="closeMobileNav()">Modalidades</a>
+  <a href="#agendar" class="m-cta" onclick="closeMobileNav()">Agendar sesión</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<!-- CAMBIO 2: foto genérica de un hombre tipo profesional vía Unsplash -->
+<section id="hero" aria-label="Inicio">
+  <div class="hero-content">
+    <p class="hero-kicker">Psicólogo Clínico · Mendoza &amp; Online</p>
+    <h1 class="hero-title">
+      Martín
+      <span class="offset">Monte<span class="period">.</span></span>
+    </h1>
+    <p class="hero-tagline">El primer paso es el más difícil. Acá estoy para acompañarte.</p>
+    <div class="hero-ctas">
+      <a href="#agendar" class="btn-primary" data-cursor="agendar">
+        Agendar sesión
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/>
+        </svg>
+      </a>
+      <a href="#sobre-mi" class="btn-ghost" data-cursor="leer">Ver enfoque</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="hero-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=85&fit=crop&crop=face,top"
+        alt="Lic. Martín Monte — Psicólogo Clínico"
+        onerror="this.src='assets/img/perfil.jpg'">
+    </div>
+    <div class="hero-img-badge">
+      <strong>Lic. Martín Monte</strong>
+      M.P. 1234 · UNCuyo
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MARQUEE ==================== -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track">
+    <div class="marquee-item">Psicología clínica</div>
+    <div class="marquee-item">Adultos &amp; adolescentes</div>
+    <div class="marquee-item">Presencial Mendoza</div>
+    <div class="marquee-item">Videollamada</div>
+    <div class="marquee-item">Lic. en Psicología UNCuyo</div>
+    <div class="marquee-item">Ansiedad</div>
+    <div class="marquee-item">Depresión</div>
+    <div class="marquee-item">Duelo</div>
+    <div class="marquee-item">Autoestima</div>
+    <div class="marquee-item">Crisis vitales</div>
+    <div class="marquee-item" aria-hidden="true">Psicología clínica</div>
+    <div class="marquee-item" aria-hidden="true">Adultos &amp; adolescentes</div>
+    <div class="marquee-item" aria-hidden="true">Presencial Mendoza</div>
+    <div class="marquee-item" aria-hidden="true">Videollamada</div>
+    <div class="marquee-item" aria-hidden="true">Lic. en Psicología UNCuyo</div>
+    <div class="marquee-item" aria-hidden="true">Ansiedad</div>
+    <div class="marquee-item" aria-hidden="true">Depresión</div>
+    <div class="marquee-item" aria-hidden="true">Duelo</div>
+    <div class="marquee-item" aria-hidden="true">Autoestima</div>
+    <div class="marquee-item" aria-hidden="true">Crisis vitales</div>
+  </div>
+</div>
+
+<!-- ==================== SOBRE MÍ ==================== -->
+<section id="sobre-mi" class="section" aria-label="Sobre mí"
+  style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; padding-top:clamp(100px,16vw,160px)">
+  <span class="section-num" aria-hidden="true">01</span>
+
+  <div class="sobre-img-wrap reveal">
+    <img
+      src="https://images.unsplash.com/photo-1586473219010-2ffc57b0d282?w=700&q=80&fit=crop"
+      alt="Consultorio de Martín Monte"
+      onerror="this.src='assets/img/consultorio.jpg'">
+    <div class="sobre-badge">
+      M.P. 1234<br>UNCuyo<br>Mendoza
+    </div>
+  </div>
+
+  <div class="sobre-content">
+    <p class="section-label reveal">Sobre mí</p>
+    <h2 class="sobre-title reveal">
+      Un espacio para <em style="font-style:italic; color:var(--terra)">entenderte</em><br>un poco mejor.
+    </h2>
+    <p class="sobre-lead reveal">
+      Soy Martín, psicólogo clínico graduado en la Universidad Nacional de Cuyo.
+      Trabajo desde un enfoque cognitivo-conductual con integración humanista:
+      herramientas concretas para cambiar lo que te hace mal, con espacio para
+      entender de dónde viene.
+    </p>
+    <p class="sobre-lead reveal" style="margin-top:-20px">
+      Atiendo adultos y adolescentes en Mendoza capital y por videollamada
+      desde cualquier punto del país. Si llegaste hasta acá, algo en vos ya está listo para empezar.
+    </p>
+
+    <dl class="sobre-defs reveal">
+      <div class="sobre-def">
+        <dt class="sobre-def-key">Modalidad</dt>
+        <dd class="sobre-def-val">Presencial + Online</dd>
+      </div>
+      <div class="sobre-def">
+        <dt class="sobre-def-key">Sesión</dt>
+        <dd class="sobre-def-val">50 minutos</dd>
+      </div>
+      <div class="sobre-def">
+        <dt class="sobre-def-key">Formación</dt>
+        <dd class="sobre-def-val">Lic. Psicología UNCuyo</dd>
+      </div>
+      <div class="sobre-def">
+        <dt class="sobre-def-key">Matrícula</dt>
+        <dd class="sobre-def-val" style="font-family:var(--f-mono); font-size:.85rem">M.P. 1234</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ==================== MOTIVOS ==================== -->
+<section id="motivos" aria-label="Motivos de consulta" style="position:relative;z-index:2;background:var(--ink);padding:clamp(60px,10vw,100px) 0 0">
+
+  <div style="padding:0 clamp(20px,5vw,60px); display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:40px">
+    <h2 class="motivos-header-title">¿Qué te <em>trajo</em> hasta acá?</h2>
+    <div class="motivos-progress"><span id="motivo-current">01</span> / 06</div>
+  </div>
+
+  <!-- Carrusel compacto — mismo sistema que modalidades -->
+  <div class="motivos-cards-wrap" id="motivos-cards-wrap">
+    <div class="motivos-cards" id="motivos-cards">
+
+      <div class="motivo-compact" data-index="0" style="--accent:#C4714A">
+        <div class="mc-num">01 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#C4714A" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="60" cy="60" r="6"/><circle cx="60" cy="60" r="18"/>
+            <circle cx="60" cy="60" r="32"/><circle cx="60" cy="60" r="48"/>
+            <circle cx="60" cy="60" r="56"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Ansiedad</h3>
+        <p class="mc-desc">Pensamientos que no paran, tensión constante, miedo sin causa clara. Trabajamos para que puedas respirar.</p>
+        <div class="mc-line" style="background:#C4714A"></div>
+      </div>
+
+      <div class="motivo-compact" data-index="1" style="--accent:#3D6B5B">
+        <div class="mc-num">02 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#3D6B5B" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="60" cy="50" r="28"/>
+            <line x1="60" y1="12" x2="60" y2="6"/><line x1="88" y1="22" x2="92" y2="18"/>
+            <line x1="98" y1="50" x2="104" y2="50"/><line x1="22" y1="50" x2="16" y2="50"/>
+            <path d="M36 72 Q60 60 84 72" fill="none"/>
+            <path d="M28 86 Q60 74 92 86" fill="none" stroke-dasharray="4 3" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Depresión</h3>
+        <p class="mc-desc">Peso en el cuerpo, ganas que no aparecen, días que se sienten iguales. Hay salida, y se encuentra acompañado.</p>
+        <div class="mc-line" style="background:#3D6B5B"></div>
+      </div>
+
+      <div class="motivo-compact" data-index="2" style="--accent:#C4714A">
+        <div class="mc-num">03 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#C4714A" stroke-width="1.2" stroke-linecap="round">
+            <path d="M60 18 C74 18 90 34 90 54 C90 74 74 86 60 104 C46 86 30 74 30 54 C30 34 46 18 60 18Z"/>
+            <path d="M60 104 Q65 112 67 118"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Duelo</h3>
+        <p class="mc-desc">Pérdidas de personas, vínculos, etapas o versiones de uno mismo. Acompañamos el proceso sin apurarlo.</p>
+        <div class="mc-line" style="background:#C4714A"></div>
+      </div>
+
+      <div class="motivo-compact" data-index="3" style="--accent:#3D6B5B">
+        <div class="mc-num">04 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#3D6B5B" stroke-width="1.2" stroke-linecap="round">
+            <rect x="16" y="10" width="56" height="80" rx="3"/>
+            <rect x="48" y="34" width="56" height="80" rx="3" stroke-dasharray="5 3" opacity=".4"/>
+            <circle cx="44" cy="34" r="14"/><path d="M20 62 Q44 48 68 62"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Autoestima</h3>
+        <p class="mc-desc">La voz interna que siempre critica, la dificultad para reconocer el propio valor. Trabajamos desde adentro.</p>
+        <div class="mc-line" style="background:#3D6B5B"></div>
+      </div>
+
+      <div class="motivo-compact" data-index="4" style="--accent:#C4714A">
+        <div class="mc-num">05 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#C4714A" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="60" cy="60" r="44"/>
+            <circle cx="60" cy="60" r="3" fill="#C4714A"/>
+            <line x1="60" y1="60" x2="60" y2="24"/>
+            <line x1="60" y1="60" x2="88" y2="74"/>
+            <path d="M52 54 Q58 46 66 54" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Estrés laboral</h3>
+        <p class="mc-desc">Exigencia, agotamiento, sensación de no poder más. Aprendemos a poner límites y recuperar energía.</p>
+        <div class="mc-line" style="background:#C4714A"></div>
+      </div>
+
+      <div class="motivo-compact" data-index="5" style="--accent:#3D6B5B">
+        <div class="mc-num">06 / 06</div>
+        <div class="mc-svg" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#3D6B5B" stroke-width="1.2" stroke-linecap="round">
+            <path d="M60 20 L60 72"/><path d="M60 72 L32 108"/>
+            <path d="M60 72 L88 108"/>
+            <circle cx="60" cy="20" r="6"/>
+            <circle cx="32" cy="108" r="5"/><circle cx="88" cy="108" r="5"/>
+          </svg>
+        </div>
+        <h3 class="mc-nombre">Crisis vitales</h3>
+        <p class="mc-desc">Separaciones, cambios de trabajo, mudanzas, decisiones difíciles. En los cruces también se crece.</p>
+        <div class="mc-line" style="background:#3D6B5B"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Nav flechas + dots -->
+  <div class="motivos-nav">
+    <button class="motivos-arrow" id="motivo-prev" aria-label="Anterior">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="11,3 5,9 11,15"/></svg>
+    </button>
+    <button class="motivos-dot active" aria-label="Ansiedad"></button>
+    <button class="motivos-dot" aria-label="Depresión"></button>
+    <button class="motivos-dot" aria-label="Duelo"></button>
+    <button class="motivos-dot" aria-label="Autoestima"></button>
+    <button class="motivos-dot" aria-label="Estrés laboral"></button>
+    <button class="motivos-dot" aria-label="Crisis vitales"></button>
+    <button class="motivos-arrow" id="motivo-next" aria-label="Siguiente">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="7,3 13,9 7,15"/></svg>
+    </button>
+  </div>
+
+</section>
+
+<!-- ==================== CÓMO TRABAJO ==================== -->
+<section id="como-trabajo" class="section" aria-label="Cómo trabajo">
+  <span class="section-num" aria-hidden="true">03</span>
+
+  <p class="section-label reveal">Cómo trabajo</p>
+  <h2 class="reveal" style="font-family:var(--f-display); font-size:clamp(2rem,4vw,3.2rem); font-weight:300; letter-spacing:-.02em; max-width:560px; line-height:1.1">
+    Un proceso <em style="font-style:italic; color:var(--terra)">claro</em>, sin vueltas.
+  </h2>
+
+  <div class="como-grid">
+    <div class="como-card reveal">
+      <p class="como-card-num">Paso 01</p>
+      <div class="como-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="4" width="32" height="40" rx="3"/>
+          <line x1="8" y1="20" x2="16" y2="20"/>
+          <path d="M16 4 L16 44"/>
+          <circle cx="32" cy="28" r="6"/>
+          <path d="M36 32 l6 6"/>
+        </svg>
+      </div>
+      <h3 class="como-card-title">Primera sesión</h3>
+      <p class="como-card-text">Nos conocemos, hablás de lo que te trajo y evaluamos cómo seguir. Sin compromiso, sin presiones.</p>
+      <div class="como-card-accent" style="background:var(--sage)"></div>
+    </div>
+
+    <div class="como-card reveal" style="animation-delay:.1s">
+      <p class="como-card-num">Paso 02</p>
+      <div class="como-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 40 Q20 20 24 24 Q28 28 40 8"/>
+          <circle cx="8" cy="40" r="3"/>
+          <circle cx="40" cy="8" r="3"/>
+          <path d="M16 32 Q24 16 32 20"/>
+        </svg>
+      </div>
+      <h3 class="como-card-title">Proceso terapéutico</h3>
+      <p class="como-card-text">Sesiones semanales o quincenales con objetivos claros. Cognitivo-conductual con espacio real para lo tuyo.</p>
+      <div class="como-card-accent" style="background:var(--terra)"></div>
+    </div>
+
+    <div class="como-card reveal" style="animation-delay:.2s">
+      <p class="como-card-num">Paso 03</p>
+      <div class="como-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="24" r="18"/>
+          <circle cx="24" cy="24" r="4"/>
+          <line x1="24" y1="6" x2="24" y2="12"/>
+          <line x1="24" y1="36" x2="24" y2="42"/>
+          <line x1="6" y1="24" x2="12" y2="24"/>
+          <line x1="36" y1="24" x2="42" y2="24"/>
+          <line x1="24" y1="24" x2="32" y2="16"/>
+        </svg>
+      </div>
+      <h3 class="como-card-title">Seguimiento</h3>
+      <p class="como-card-text">Revisamos el avance, ajustamos el enfoque y trabajamos para que no necesités volver por lo mismo.</p>
+      <div class="como-card-accent" style="background:var(--sage)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIOS ==================== -->
+<section id="testimonios" aria-label="Testimonios">
+  <div class="test-header">
+    <p class="section-label reveal">Lo que dicen</p>
+    <h2 class="reveal" style="font-family:var(--f-display); font-size:clamp(2rem,4vw,3.2rem); font-weight:300; letter-spacing:-.02em; line-height:1.1; max-width:500px">
+      Personas que ya dieron el paso.
+    </h2>
+    <p class="reveal test-nota">
+      Cada reseña fue compartida con consentimiento. Sus nombres se publican con su autorización, felices de que su experiencia ayude a alguien más a animarse.
+    </p>
+  </div>
+
+  <!-- Desktop: grilla / Mobile: carrusel deslizable -->
+  <div class="test-carousel-wrap">
+    <div class="test-carousel" id="test-carousel">
+
+      <div class="test-vineta">
+        <span class="test-vineta-icon">❝</span>
+        <div>
+          <p class="test-vineta-texto">Llegué sin saber por dónde empezar. Martín me ayudó a ordenar todo lo que tenía adentro. Fue un antes y un después en mi vida.</p>
+          <p class="test-vineta-autor">— Valentina R., 31 años · Mendoza</p>
+        </div>
+      </div>
+
+      <div class="test-vineta">
+        <span class="test-vineta-icon">❝</span>
+        <div>
+          <p class="test-vineta-texto">Por primera vez entendí de dónde venía mi ansiedad. Salí de cada sesión con algo concreto para aplicar. Fue la mejor decisión que tomé.</p>
+          <p class="test-vineta-autor">— Facundo M., 28 años · Mendoza</p>
+        </div>
+      </div>
+
+      <div class="test-vineta">
+        <span class="test-vineta-icon">❝</span>
+        <div>
+          <p class="test-vineta-texto">Nunca había ido al psicólogo. Salí de la primera sesión sintiéndome escuchada de verdad, sin juzgarme. Hoy lo recomiendo a todos.</p>
+          <p class="test-vineta-autor">— Luciana B., 40 años · Godoy Cruz</p>
+        </div>
+      </div>
+
+      <div class="test-vineta">
+        <span class="test-vineta-icon">❝</span>
+        <div>
+          <p class="test-vineta-texto">Trabajé el duelo que no podía procesar solo. Martín tiene una forma de acompañar que hace todo más llevadero. Muy agradecido de haber ido con un profesional.</p>
+          <p class="test-vineta-autor">— Ezequiel P., 36 años · San Rafael</p>
+        </div>
+      </div>
+
+      <div class="test-vineta">
+        <span class="test-vineta-icon">❝</span>
+        <div>
+          <p class="test-vineta-texto">Tres meses de proceso y ya no me reconozco, en el mejor sentido. Aprendí a ponerme límites y a entender mis emociones. Un paso enorme.</p>
+          <p class="test-vineta-autor">— Natalia V., 44 años · Mendoza</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Dots solo en mobile -->
+    <div class="test-dots" id="test-dots" aria-hidden="true">
+      <span class="test-dot active"></span>
+      <span class="test-dot"></span>
+      <span class="test-dot"></span>
+      <span class="test-dot"></span>
+      <span class="test-dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MODALIDADES ==================== -->
+<!-- CAMBIO 6: dirección Av. San Martín 1111 + link maps real -->
+<section id="modalidades" class="section" aria-label="Modalidades de atención">
+  <span class="section-num" aria-hidden="true">05</span>
+
+  <p class="section-label reveal">Cómo nos encontramos</p>
+  <h2 class="reveal" style="font-family:var(--f-display); font-size:clamp(2rem,4vw,3.2rem); font-weight:300; letter-spacing:-.02em; max-width:560px; line-height:1.1; margin-bottom:60px">
+    Presencial o a distancia, el <em style="font-style:italic; color:var(--sage)">proceso</em> es el mismo.
+  </h2>
+
+  <div class="modal-grid">
+    <!-- Tabs solo visible en mobile (CSS lo maneja) -->
+    <div class="modal-tabs" id="modal-tabs">
+      <button class="modal-tab-btn active" data-tab="0" onclick="switchTab(0)">📍 Presencial</button>
+      <button class="modal-tab-btn" data-tab="1" onclick="switchTab(1)">💻 Online</button>
+    </div>
+
+    <!-- PRESENCIAL -->
+    <div class="modal-card presencial reveal tab-visible" data-modal="0">
+      <div class="modal-card-inner">
+        <div>
+          <p class="modal-card-label">Modalidad</p>
+          <h3 class="modal-card-title">Presencial</h3>
+          <div class="modal-info">
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10" cy="8" r="4"/>
+                <path d="M10 12 C10 12 4 17 4 20"/>
+                <path d="M10 12 C10 12 16 17 16 20"/>
+              </svg>
+              Av. San Martín 1111, Mendoza capital
+            </div>
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10" cy="10" r="8"/><polyline points="10,5 10,10 13,13"/>
+              </svg>
+              Lun–Vie 9–20h · Sáb 9–13h
+            </div>
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="14" height="14" rx="2"/>
+                <line x1="3" y1="8" x2="17" y2="8"/>
+              </svg>
+              Mendoza capital
+            </div>
+          </div>
+          <!-- Mapa estático — sin iframe que Google puede bloquear -->
+          <div class="modal-map-static">
+            <div class="map-static-pin">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10" cy="8" r="4"/>
+                <path d="M10 12 C6 16 3 18 3 20 M10 12 C14 16 17 18 17 20"/>
+              </svg>
+            </div>
+            <div class="map-static-info">
+              <strong>Av. San Martín 1111</strong>
+              <span>Ciudad de Mendoza · Argentina</span>
+              <a href="https://maps.app.goo.gl/VT36Duf9ntAuPWRx7"
+                 target="_blank" rel="noopener"
+                 class="map-static-link">
+                Ver en Google Maps →
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#agendar" class="modal-cta-pres" style="margin-top:28px" data-cursor="agendar">
+          Agendar turno presencial →
+        </a>
+      </div>
+    </div>
+
+    <!-- ONLINE -->
+    <div class="modal-card online reveal" data-modal="1">
+      <div class="modal-card-inner">
+        <div>
+          <p class="modal-card-label" style="color:var(--taupe)">Modalidad</p>
+          <h3 class="modal-card-title" style="color:var(--ink)">Online</h3>
+          <div class="modal-info">
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="var(--taupe)" stroke-width="1.5">
+                <rect x="2" y="5" width="16" height="12" rx="2"/>
+                <polygon points="8,8 14,11 8,14" fill="var(--taupe)" opacity=".5"/>
+              </svg>
+              Videollamada · Todo el país
+            </div>
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="var(--taupe)" stroke-width="1.5">
+                <circle cx="10" cy="10" r="8"/><polyline points="10,5 10,10 13,13"/>
+              </svg>
+              Mismos horarios que presencial
+            </div>
+            <div class="modal-info-row">
+              <svg class="modal-info-icon" viewBox="0 0 20 20" fill="none" stroke="var(--taupe)" stroke-width="1.5">
+                <path d="M2 16 C6 10 14 10 18 16"/><circle cx="10" cy="7" r="4"/>
+              </svg>
+              Coordinamos por WhatsApp
+            </div>
+          </div>
+          <div style="background:var(--sage-light); border-radius:var(--radius-md); padding:20px; margin-top:20px">
+            <p style="font-family:var(--f-display); font-style:italic; font-size:1rem; color:var(--sage); font-weight:300; line-height:1.6">
+              "La calidad del proceso terapéutico no cambia por la distancia."
+            </p>
+          </div>
+        </div>
+        <a href="#agendar" class="modal-cta-online" style="margin-top:28px" data-cursor="agendar">
+          Agendar turno online →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== AGENDAR ==================== -->
+<!-- CAMBIOS 7 y 8: links reales de MP y WA, texto corregido -->
+<section id="agendar" class="section" aria-label="Agendar sesión">
+  <span class="section-num" aria-hidden="true" style="color:rgba(255,255,255,.04)">06</span>
+
+  <p class="section-label" style="color:var(--terra)">Agendar sesión</p>
+
+  <div class="agendar-grid">
+
+    <div>
+      <h2 class="form-title">¿Empezamos?</h2>
+
+      <form id="booking-form" novalidate>
+        <div class="form-field">
+          <label for="f-nombre"><span class="form-field-num">01 —</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre completo</label>
+          <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre y apellido" required autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="f-wsp"><span class="form-field-num">02 —</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp</label>
+          <input type="tel" id="f-wsp" name="whatsapp" placeholder="+54 9 261 000-0000" required autocomplete="tel">
+        </div>
+
+        <div class="form-field">
+          <label for="f-modalidad"><span class="form-field-num">03 —</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modalidad</label>
+          <select id="f-modalidad" name="modalidad" required>
+            <option value="" disabled selected>Elegí una opción</option>
+            <option value="Presencial en Mendoza">Presencial en Mendoza</option>
+            <option value="Online por videollamada">Online por videollamada</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="f-motivo"><span class="form-field-num">04 —</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Motivo de consulta</label>
+          <select id="f-motivo" name="motivo" required>
+            <option value="" disabled selected>¿Qué te trajo?</option>
+            <option value="Ansiedad">Ansiedad</option>
+            <option value="Depresión">Depresión</option>
+            <option value="Duelo">Duelo</option>
+            <option value="Autoestima">Autoestima</option>
+            <option value="Estrés laboral">Estrés laboral</option>
+            <option value="Crisis vitales">Crisis vitales</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="f-mensaje"><span class="form-field-num">05 —</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mensaje (opcional)</label>
+          <textarea id="f-mensaje" name="mensaje" placeholder="Contame brevemente lo que necesitás, si querés."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" data-cursor="pagar">
+          Reservar y pagar seña →
+        </button>
+      </form>
+    </div>
+
+    <aside class="agendar-aside">
+      <div class="aside-price">$25.000</div>
+      <p class="aside-price-detail">ARS · 50 minutos · Seña 50% al reservar</p>
+
+      <div class="aside-divider"></div>
+
+      <div class="aside-info-row">
+        <svg class="aside-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 2a5 5 0 100 10A5 5 0 008 2z"/>
+          <path d="M8 5v3l2 1"/>
+        </svg>
+        Al enviar el formulario, se abre el link de pago de la seña y WhatsApp para coordinar fecha y hora.
+      </div>
+
+      <div class="aside-info-row">
+        <svg class="aside-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="12" height="12" rx="2"/>
+          <line x1="2" y1="6" x2="14" y2="6"/>
+          <line x1="6" y1="2" x2="6" y2="6"/>
+          <line x1="10" y1="2" x2="10" y2="6"/>
+        </svg>
+        Lunes a viernes 9:00–20:00<br>Sábados 9:00–13:00
+      </div>
+
+      <!-- CAMBIO 8: texto corregido para evitar malentendidos -->
+      <div class="aside-info-row">
+        <svg class="aside-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2H4a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2z"/>
+          <path d="M8 6v4M6 8h4"/>
+        </svg>
+        Primera sesión: un paso hacia la comprensión.
+      </div>
+
+      <div class="aside-divider"></div>
+
+      <!-- CAMBIO 7: link WhatsApp real -->
+      <a href="https://wa.me/5492616117962"
+         target="_blank" rel="noopener"
+         data-cursor="WhatsApp"
+         class="aside-wsp-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Consultar por WhatsApp
+      </a>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ==================== CRÉDITO FINAL ==================== -->
+<div id="site-credit">
+  Web design by
+  <a href="https://wa.me/5492616117962?text=Hola%2C%20te%20escribo%20por%20un%20dise%C3%B1o%20web"
+     target="_blank" rel="noopener">Joaquin Borquez</a>
+  · Mendoza
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="lib/gsap.min.js?v=20260619" defer></script>
+<script src="lib/ScrollTrigger.min.js?v=20260619" defer></script>
+<script src="lib/manifest.js?v=20260619" defer></script>
+<script src="main.js?v=20260619" defer></script>
+
+<script>
+function closeMobileNav() {
+  var nav     = document.getElementById('mobile-nav');
+  var overlay = document.getElementById('mobile-overlay');
+  var burger  = document.getElementById('burger');
+  if (nav)     nav.classList.remove('open');
+  if (overlay) overlay.classList.remove('open');
+  if (burger)  burger.setAttribute('aria-expanded', 'false');
+}
+
+function switchTab(idx) {
+  var cards = document.querySelectorAll('.modal-card');
+  var btns  = document.querySelectorAll('.modal-tab-btn');
+  cards.forEach(function(c, i) { c.classList.toggle('tab-visible', i === idx); });
+  btns.forEach(function(b, i)  { b.classList.toggle('active', i === idx); });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  /* Burger */
+  var burger  = document.getElementById('burger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var overlay = document.getElementById('mobile-overlay');
+  if (burger && mobileNav) {
+    burger.addEventListener('click', function() {
+      var open = mobileNav.classList.toggle('open');
+      if (overlay) overlay.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* Carrusel de testimonios en mobile */
+  var carousel = document.getElementById('test-carousel');
+  var dots     = document.querySelectorAll('.test-dot');
+  if (carousel && dots.length) {
+    var total    = dots.length;
+    var current  = 0;
+    var startX   = 0;
+
+    function goTestTo(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= total) idx = total - 1;
+      current = idx;
+      carousel.style.transform = 'translateX(-' + (current * 100) + 'vw)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    carousel.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) goTestTo(current + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTestTo(i); });
+    });
+  }
+});
+</script>
+
+</body>
+</html>

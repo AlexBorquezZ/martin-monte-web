@@ -1,0 +1,50 @@
+# =============================================
+# .htaccess — Lic. Martín Monte
+# Hostinger / Apache
+# =============================================
+
+# Codificación UTF-8 global
+AddDefaultCharset UTF-8
+
+# MIME types
+AddType text/css         .css
+AddType text/javascript  .js
+AddType image/webp       .webp
+AddType image/svg+xml    .svg
+AddType application/font-woff2 .woff2
+
+# Compresión GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+# Cache de assets estáticos
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                 "access plus 1 month"
+  ExpiresByType text/javascript          "access plus 1 month"
+  ExpiresByType application/javascript   "access plus 1 month"
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 1 month"
+  ExpiresByType font/woff2               "access plus 1 year"
+</IfModule>
+
+# Cabeceras de seguridad básicas
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Página de error personalizada (opcional)
+# ErrorDocument 404 /index.html
+
+# Redirigir a HTTPS si está disponible
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} !^localhost
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
