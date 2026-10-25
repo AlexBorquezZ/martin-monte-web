@@ -283,3 +283,21 @@ Limitaciones de diseño conocidas: no hay sincronización entre dispositivos (po
 ---
 
 Iconos, rutinas, frases y fichas: contenido original incluido en este repositorio.
+
+---
+
+## Versión publicada en GitHub Pages
+
+La carpeta `ritmo-app/` (en la raíz del repositorio) contiene la app **ya compilada** para GitHub Pages, que en este repositorio publica desde `main`. Una vez fusionada en `main`, la app queda en:
+
+**https://alexborquezz.github.io/martin-monte-web/ritmo-app/**
+
+Para actualizarla después de cambiar el código:
+
+```bash
+cd ritmo
+RITMO_BASE=/martin-monte-web/ritmo-app/ npx vite build --outDir ../ritmo-app --emptyOutDir
+rm -f ../ritmo-app/.htaccess
+```
+
+y hacer commit de `ritmo-app/`.
