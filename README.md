@@ -126,3 +126,9 @@ Para cambios menores (texto, precio, foto, WhatsApp, link de pago), esta guía c
 ---
 
 *Sitio desarrollado para Lic. Martín Monte — Psicólogo Clínico · Mendoza*
+
+---
+
+## Aplicación RITMO (carpeta `ritmo/`)
+
+La carpeta **`ritmo/`** contiene una aplicación independiente (PWA de hábitos personales) que no modifica este sitio. Sus instrucciones completas están en [`ritmo/README.md`](ritmo/README.md).
